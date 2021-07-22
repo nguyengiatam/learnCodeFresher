@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        long number = 0;
-        var scan = new Scanner(System.in);
+        int number = 0;
+        Scanner scan = new Scanner(System.in);
         System.out.println("Nhập vào một số nguyên lớn hơn 20: ");
         while(number < 20){
-            String value = scan.next();
             try {
-                number = Long.parseLong(value);
+                number = scan.nextInt();
                 if(number < 20){
-                    System.out.println("Số vừa nhập bé hơn 20. Hãy nhập lại");
+                    System.out.println("Số vừa nhập bé hơn 20. Hãy nhập lại.");
                 }
-            }catch(NumberFormatException ex){
+            }catch(Exception ex){
                 System.out.println("Bạn nhập sai định dạng yêu cầu hoặc một số quá lớn. Hãy nhập lại.");
+                scan = new Scanner(System.in);
             }
         }
         scan.close();
