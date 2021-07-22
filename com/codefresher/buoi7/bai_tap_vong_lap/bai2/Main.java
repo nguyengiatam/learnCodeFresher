@@ -22,7 +22,7 @@ public class Main {
 
         String msg = number + " là số nguyên tố";
 
-        for(int i = 2; i < Math.sqrt(number); i++){
+        for(int i = 2; i <= Math.sqrt(number); i++){
             if(number % i == 0){
                 msg = number + " không phải số nguyên tố";
                 break;
