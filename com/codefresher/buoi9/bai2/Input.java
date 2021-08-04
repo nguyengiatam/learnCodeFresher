@@ -25,7 +25,7 @@ public class Input {
                 Integer.parseInt(value);
             }
             return true;
-        } catch (Exception ex) {
+        } catch (NumberFormatException ex) {
             return false;
         }
     }
